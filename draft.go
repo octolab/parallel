@@ -35,7 +35,8 @@ type commander interface {
 }
 
 func New() *cobra.Command {
-	return &cobra.Command{Use: "semaphore", Short: "Semaphore pattern implementation with timeout of lock/unlock operations"}
+	return &cobra.Command{Use: "semaphore",
+		Short: "CLI tool based on https://github.com/kamilsk/semaphore package to execute commands in parallel."}
 }
 
 func draft() { tool(New(), os.Stderr, os.Exit) }

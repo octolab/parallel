@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	colorable "github.com/mattn/go-colorable"
-	isatty "github.com/mattn/go-isatty"
+	"github.com/mattn/go-colorable"
+	"github.com/mattn/go-isatty"
 )
 
 var (
@@ -23,6 +23,9 @@ var (
 	// Output defines the standard output of the print functions. By default
 	// os.Stdout is used.
 	Output = colorable.NewColorableStdout()
+
+	// Error defines a color supporting writer for os.Stderr.
+	Error = colorable.NewColorableStderr()
 
 	// colorsCache is used to reduce the count of created Color objects and
 	// allows to reuse already created objects with required Attribute.
