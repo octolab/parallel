@@ -1,5 +1,3 @@
-# github.com/cheggaaa/pb v1.0.28
-github.com/cheggaaa/pb
 # github.com/davecgh/go-spew v1.1.1
 github.com/davecgh/go-spew/spew
 # github.com/fatih/color v1.7.0
@@ -28,5 +26,7 @@ github.com/spf13/cobra
 github.com/spf13/pflag
 # github.com/stretchr/testify v1.3.0
 github.com/stretchr/testify/assert
-# golang.org/x/sys v0.0.0-20190303122642-d455e41777fc
+# golang.org/x/sys v0.0.0-20190303192550-c2f5717e611c
 golang.org/x/sys/unix
+# gopkg.in/cheggaaa/pb.v1 v1.0.28
+gopkg.in/cheggaaa/pb.v1

@@ -12,9 +12,9 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/cheggaaa/pb"
 	"github.com/fatih/color"
 	"github.com/pkg/errors"
+	pb "gopkg.in/cheggaaa/pb.v1"
 )
 
 var (
