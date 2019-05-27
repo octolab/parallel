@@ -2,13 +2,9 @@
 >
 > `semaphore` provides functionality to execute terminal commands in parallel.
 
-[![Awesome][icon_awesome]][awesome]
-[![Patreon][icon_patreon]][support]
-[![GoDoc][icon_docs]][docs]
-[![Research][icon_research]][research]
-[![License][icon_license]][license]
+[![Awesome][icon_awesome]][page_awesome]
 
-## Concept
+## 💡 Idea
 
 ```bash
 $ semaphore create 2
@@ -18,9 +14,16 @@ $ semaphore add -- ansible-playbook
 $ semaphore wait --timeout=1m --notify
 ```
 
-[![asciicast](https://asciinema.org/a/135943.png)](https://asciinema.org/a/135943)
+Full description of the idea is available
+[here](https://www.notion.so/octolab/semaphore-7d5ebf715d0141d1a8fa045c7966be3b?r=0b753cbf767346f5a6fd51194829a2f3).
 
-## Documentation
+## 🏆 Motivation
+
+...
+
+## 🤼‍♂️ How to
+
+[![asciicast](https://asciinema.org/a/135943.png)](https://asciinema.org/a/135943)
 
 ```
 Usage: semaphore COMMAND
@@ -77,9 +80,9 @@ $ semaphore add -- bash -c "cd /tmp; \
 $ semaphore wait
 ```
 
-## Installation
+## 🧩 Installation
 
-### Brew
+### Homebrew
 
 ```bash
 $ brew install kamilsk/tap/semaphore
@@ -104,7 +107,7 @@ $ # or use mirror
 $ egg bitbucket.org/kamilsk/semaphore@^4.0.0 -- make test install
 ```
 
-> [egg][]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
+> [egg][page_egg]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
 
 ### Bash and Zsh completions
 
@@ -117,46 +120,12 @@ $ semaphore completion zsh  > /path/to/zsh-completions/_semaphore.zsh
 
 ---
 
-[![Gitter][icon_gitter]][gitter]
-[![@kamilsk][icon_tw_author]][author]
-[![@octolab][icon_tw_sponsor]][sponsor]
-
-made with ❤️ by [OctoLab][octolab]
-
-[awesome]:         https://github.com/avelino/awesome-go#goroutines
-[build]:           https://travis-ci.org/kamilsk/semaphore
-[docs]:            https://godoc.org/github.com/kamilsk/semaphore
-[gitter]:          https://gitter.im/kamilsk/semaphore
-[license]:         LICENSE
-[promo]:           https://github.com/kamilsk/semaphore
-[quality]:         https://scrutinizer-ci.com/g/kamilsk/semaphore/?branch=v5
-[research]:        https://github.com/kamilsk/go-research/tree/master/projects/semaphore
-[legacy]:          https://github.com/kamilsk/semaphore/tree/master
-[v4]:              https://github.com/kamilsk/semaphore/tree/v4
-[v5]:              https://github.com/kamilsk/semaphore/projects/6
-
-[egg]:             https://github.com/kamilsk/egg
-[breaker]:         https://github.com/kamilsk/breaker
-[gomod]:           https://github.com/golang/go/wiki/Modules
-[platform]:        https://github.com/kamilsk/platform
-
-[author]:          https://twitter.com/ikamilsk
-[octolab]:         https://www.octolab.org/
-[sponsor]:         https://twitter.com/octolab_inc
-[support]:         https://www.patreon.com/octolab
-
-[analytics]:       https://ga-beacon.appspot.com/UA-109817251-2/semaphore/v5?pixel
-[tweet]:           https://twitter.com/intent/tweet?text=Semaphore%20pattern%20implementation%20with%20a%20timeout%20of%20lock%2Funlock%20operations&url=https://github.com/kamilsk/semaphore&via=ikamilsk&hashtags=go,semaphore,throughput,limiter
+made with ❤️ for everyone
 
 [icon_awesome]:    https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg
-[icon_build]:      https://travis-ci.org/kamilsk/semaphore.svg?branch=v5
-[icon_coverage]:   https://scrutinizer-ci.com/g/kamilsk/semaphore/badges/coverage.png?b=v5
-[icon_docs]:       https://godoc.org/github.com/kamilsk/semaphore?status.svg
-[icon_gitter]:     https://badges.gitter.im/Join%20Chat.svg
-[icon_license]:    https://img.shields.io/badge/license-MIT-blue.svg
-[icon_patreon]:    https://img.shields.io/badge/patreon-donate-orange.svg
-[icon_quality]:    https://scrutinizer-ci.com/g/kamilsk/semaphore/badges/quality-score.png?b=v5
-[icon_research]:   https://img.shields.io/badge/research-in%20progress-yellow.svg
-[icon_tw_author]:  https://img.shields.io/badge/author-%40kamilsk-blue.svg
-[icon_tw_sponsor]: https://img.shields.io/badge/sponsor-%40octolab-blue.svg
-[icon_twitter]:    https://img.shields.io/twitter/url/http/shields.io.svg?style=social
+[icon_build]:      https://travis-ci.org/kamilsk/semaphore.cli.svg?branch=master
+
+[page_awesome]:    https://github.com/avelino/awesome-go#goroutines
+[page_build]:      https://travis-ci.org/kamilsk/semaphore.cli
+[page_promo]:      https://github.com/kamilsk/semaphore.cli
+[page_egg]:        https://github.com/kamilsk/egg
