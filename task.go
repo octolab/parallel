@@ -12,6 +12,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/kamilsk/breaker"
 	"github.com/kamilsk/semaphore/v5"
 	"github.com/pkg/errors"
 )
@@ -37,9 +38,9 @@ func (t *Task) Run() <-chan Result {
 		defer func() { close(results) }()
 
 		limiter := semaphore.New(t.Capacity)
-		deadline := semaphore.Multiplex(
-			semaphore.WithTimeout(t.Timeout),
-			semaphore.WithSignal(os.Interrupt),
+		deadline := breaker.Multiplex(
+			breaker.BreakByTimeout(t.Timeout),
+			breaker.BreakBySignal(os.Interrupt),
 		)
 
 		wg := &sync.WaitGroup{}
@@ -58,7 +59,7 @@ func (t *Task) Run() <-chan Result {
 					wg.Done()
 				}()
 
-				release, err := limiter.Acquire(deadline)
+				release, err := limiter.Acquire(deadline.Done())
 				if err != nil {
 					result.Error = errors.Wrap(err, "semaphore")
 					return

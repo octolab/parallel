@@ -1,6 +1,6 @@
 > # 🚦 cmd/semaphore
 >
-> `semaphore` provides functionality to execute terminal commands in parallel.
+> Tool to execute terminal commands in parallel.
 
 [![Awesome][icon_awesome]][page_awesome]
 

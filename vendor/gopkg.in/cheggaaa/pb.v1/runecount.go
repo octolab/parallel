@@ -3,7 +3,7 @@ package pb
 import (
 	"regexp"
 
-	runewidth "github.com/mattn/go-runewidth"
+	"github.com/mattn/go-runewidth"
 )
 
 // Finds the control character sequences (like colors)
