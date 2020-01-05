@@ -1,8 +1,9 @@
-> # 🚦 cmd/semaphore
+> # 🚦 semaphore
 >
 > Tool to execute terminal commands in parallel.
 
-[![Awesome][icon_awesome]][page_awesome]
+[![Build][build.icon]][build.page]
+[![Template][template.icon]][template.page]
 
 ## 💡 Idea
 
@@ -14,8 +15,7 @@ $ semaphore add -- ansible-playbook
 $ semaphore wait --timeout=1m --notify
 ```
 
-Full description of the idea is available
-[here](https://www.notion.so/octolab/semaphore-7d5ebf715d0141d1a8fa045c7966be3b?r=0b753cbf767346f5a6fd51194829a2f3).
+Full description of the idea is available [here][design.page].
 
 ## 🏆 Motivation
 
@@ -91,23 +91,21 @@ $ brew install kamilsk/tap/semaphore
 ### Binary
 
 ```bash
-$ export REQ_VER=4.0.0  # all available versions are on https://github.com/kamilsk/semaphore/releases
-$ export REQ_OS=Linux   # macOS and Windows are also available
-$ export REQ_ARCH=64bit # 32bit is also available
-$ curl -sL -o semaphore.tar.gz \
-       https://github.com/kamilsk/semaphore/releases/download/"${REQ_VER}/semaphore_${REQ_VER}_${REQ_OS}-${REQ_ARCH}".tar.gz
-$ tar xf semaphore.tar.gz -C "${GOPATH}"/bin/ && rm semaphore.tar.gz
+$ curl -sSL https://bit.ly/install-semaphore | sh
+# or
+$ wget -qO- https://bit.ly/install-semaphore | sh
 ```
 
-### From source code
+### Source
 
 ```bash
-$ egg github.com/kamilsk/semaphore@^4.0.0 -- make test install
-$ # or use mirror
-$ egg bitbucket.org/kamilsk/semaphore@^4.0.0 -- make test install
+# use standard go tools
+$ go get -u github.com/kamilsk/semaphore
+# or use egg tool
+$ egg tools add github.com/kamilsk/semaphore
 ```
 
-> [egg][page_egg]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
+> [egg][egg.page]<sup id="anchor-egg">[1](#egg)</sup> is an `extended go get`.
 
 ### Bash and Zsh completions
 
@@ -116,16 +114,20 @@ $ semaphore completion bash > /path/to/bash_completion.d/semaphore.sh
 $ semaphore completion zsh  > /path/to/zsh-completions/_semaphore.zsh
 ```
 
-<sup id="egg">1</sup> The project is still in prototyping. [↩](#anchor-egg)
+<sup id="egg">1</sup> The project is still in prototyping.[↩](#anchor-egg)
 
 ---
 
 made with ❤️ for everyone
 
-[icon_awesome]:    https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg
-[icon_build]:      https://travis-ci.org/kamilsk/semaphore.cli.svg?branch=master
+[build.icon]:       https://travis-ci.org/kamilsk/semaphore.cli.svg?branch=master
+[build.page]:       https://travis-ci.org/kamilsk/semaphore.cli
 
-[page_awesome]:    https://github.com/avelino/awesome-go#goroutines
-[page_build]:      https://travis-ci.org/kamilsk/semaphore.cli
-[page_promo]:      https://github.com/kamilsk/semaphore.cli
-[page_egg]:        https://github.com/kamilsk/egg
+[design.page]:      https://www.notion.so/octolab/semaphore-7d5ebf715d0141d1a8fa045c7966be3b?r=0b753cbf767346f5a6fd51194829a2f3
+
+[promo.page]:       https://github.com/kamilsk/semaphore.cli
+
+[template.page]:    https://github.com/octomation/go-tool
+[template.icon]:    https://img.shields.io/badge/template-go--tool-blue
+
+[egg.page]:         https://github.com/kamilsk/egg

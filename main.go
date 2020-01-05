@@ -5,6 +5,9 @@ import (
 	"os"
 	"runtime"
 	"text/template"
+
+	_ "github.com/stretchr/testify/assert"
+	_ "go.octolab.org/toolkit/cli/cobra"
 )
 
 const (
