@@ -4,9 +4,11 @@ import (
 	"io"
 	"os"
 
-	platform "github.com/kamilsk/platform/cmd/cobra"
 	"github.com/spf13/cobra"
+	platform "go.octolab.org/toolkit/cli/cobra"
 )
+
+const unknown = "unknown"
 
 var (
 	commit  = "none"

@@ -1,5 +1,8 @@
+---
+project_name: parallel
+
 archives:
-- id: binary
+- id: parallel
   files:
   - LICENSE
   format: tar.gz
@@ -12,18 +15,27 @@ archives:
 
 brews:
 - name: semaphore
-  description: Tool to execute terminal commands in parallel.
-  homepage: https://github.com/kamilsk/semaphore.cli
   commit_author:
     name:  Kamil Samigullin
     email: kamil@samigullin.info
+  description: Tool to execute terminal commands in parallel.
   folder: Formula
+  homepage: https://github.com/octolab/parallel
   github:
-    name:  homebrew-tap
     owner: kamilsk
+    name:  homebrew-tap
+  install: |
+    bin.install "parallel"
+    output = Utils.popen_read("#{bin}/parallel completion bash")
+    (bash_completion/"parallel").write output
+    output = Utils.popen_read("#{bin}/parallel completion zsh")
+    (zsh_completion/"_parallel").write output
+    prefix.install_metafiles
+  test: |
+    system "#{bin}/parallel --version"
 
 builds:
-- binary: semaphore
+- binary: parallel
   env:
   - CGO_ENABLED=0
   goarch:
@@ -38,7 +50,6 @@ builds:
 checksum: { name_template: checksums.txt }
 
 release:
-  draft: false
   github:
-    name:  semaphore.cli
-    owner: kamilsk
+    owner: octolab
+    name:  parallel
